@@ -18,7 +18,9 @@ app.use(express.json());
 // app.get('/*', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 // });
-
+app.get('/', (req, res) => {
+    res.send("Hello world");
+})
 app.get('/test', (req, res) => {
     res.json({test: "hello world"});
 })
@@ -109,5 +111,5 @@ app.delete("/todos/:id", async(req, res) => {
 
 // server start
 app.listen(PORT, () => {
-    console.log("server has started on port 5000");
+    console.log("server has started on port " + PORT);
 });
