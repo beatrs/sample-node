@@ -28,7 +28,7 @@ export default function InputTodo() {
 
     return(
         <Fragment>
-            <h1 className="text-center mt-5">Pern Todo List</h1>
+            <h1 className="text-center mt-5">Todo List</h1>
             <form className="d-flex mx-auto mt-5 input-form" onSubmit={onSubmitForm}>
                 <input 
                     type="text" 
