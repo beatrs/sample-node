@@ -11,6 +11,7 @@ export default function ListTodo() {
                 method: "DELETE"
             })
             
+            console.log(response)
             setTodos(todos.filter(todo => todo.id !== id))
         } catch (err) {
             console.error(err.message)
@@ -18,7 +19,7 @@ export default function ListTodo() {
     }
     const getTodos = async() => {
         try {
-            const response = await fetch("http://localhost:5000/todos") // method: GET by default
+            const response = await fetch("/todos") // method: GET by default
             const jsonRes = await response.json()
 
             console.log(jsonRes)
