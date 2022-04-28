@@ -7,7 +7,7 @@ export default function ListTodo() {
 
     const deleteTodo = async(id) => {
         try {
-            const response = await fetch(`http://localhost:5000/todos/${id}`, {
+            const response = await fetch(`/todos/${id}`, {
                 method: "DELETE"
             })
             
