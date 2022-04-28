@@ -13,8 +13,13 @@ const pool = new Pool({
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     database: process.env.DB_DATABASE,
-    connectionString: process.env.NODE_ENV === "production" ? prod : dev
+    connectionString: process.env.NODE_ENV === "production" ? prod : dev,
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
+
+pool.connect();
 
 
 // export file
