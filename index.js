@@ -6,24 +6,24 @@ const cors = require("cors");
 const pool = require("./db");
 
 const PORT = process.env.PORT || 5000;
-
+const path = require("path");
 // middleware
 app.use(cors());
 // access client side data
 app.use(express.json());
 
 //react
-// app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static('client/build'));
 
 // app.get('/*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+//   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 // });
-app.get('/', (req, res) => {
-    res.send("Hello world");
-})
+
 app.get('/test', (req, res) => {
     res.json({test: "hello world"});
 })
+
+
 
 //* ROUTES 
 
