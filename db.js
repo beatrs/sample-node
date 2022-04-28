@@ -19,7 +19,7 @@ const pool = new Pool({
     }
 });
 
-pool.connect();
+
 
 
 // export file
